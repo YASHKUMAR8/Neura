@@ -1,0 +1,259 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+/* Background Color - Dark Blue */
+body {
+  background: linear-gradient(135deg, #5a80b8, #4c76a0);
+  color: white;
+  position: relative;
+}
+
+/* Navigation Bar with Animations */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  font-family: "Jacquard 12", serif;
+  align-items: center;
+  padding: 6px 50px;
+  background:linear-gradient(180deg, rgba(0,0,23,1) 41%, rgba(4,39,63,1) 66%, rgba(37,150,190,1) 91%);
+  width: 100%;
+  top: 10px;
+  position: fixed;
+  z-index: 1000;
+  transition: background 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+  animation: slideDown 0.5s ease-in-out;
+  border-radius: 30px;
+  overflow: hidden;
+}
+
+/* Navbar hover effect */
+.navbar:hover {
+  background: rgb(15, 9, 50);
+  box-shadow: 0px 4px 10px rgba(85, 223, 247, 0.5);
+}
+
+.navbar .logo {
+  font-size: 30px;
+  font-weight: bold;
+  color:#2596be;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+}
+
+.nav-links li {
+  margin: 0 15px;
+}
+
+/* Nav Links Hover Animation */
+/* Enhanced Nav Links Hover Animation */
+.nav-links li a {
+  text-decoration: none;
+  color: white;
+  font-weight: 500;
+  position: relative;
+  transition: color 0.3s, transform 0.2s ease-in-out;
+}
+
+.nav-links li a:hover {
+  color: #2596be;
+  transform: translateY(-3px);
+}
+
+/* Adding a glowing underline effect */
+.nav-links li a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -5px;
+  width: 100%;
+  height: 2px;
+  background: linear-gradient(90deg, #55ccf7, #00d9ff);
+  transform: scaleX(0);
+  transition: transform 0.3s ease-in-out;
+}
+
+.nav-links li a:hover::after {
+  transform: scaleX(1);
+}
+
+/* Specific scaling effect for Product, Algorithm, Output, Partners, Resources, Company */
+.nav-links li:nth-child(1) a,
+.nav-links li:nth-child(2) a,
+.nav-links li:nth-child(3) a,
+.nav-links li:nth-child(4) a,
+.nav-links li:nth-child(5) a,
+.nav-links li:nth-child(6) a {
+  transition: transform 0.3s ease-in-out, color 0.3s ease-in-out;
+}
+
+.nav-links li:nth-child(1) a:hover,
+.nav-links li:nth-child(2) a:hover,
+.nav-links li:nth-child(3) a:hover,
+.nav-links li:nth-child(4) a:hover,
+.nav-links li:nth-child(5) a:hover,
+.nav-links li:nth-child(6) a:hover {
+  transform: scale(1.1);
+  color:#2596be;
+}
+
+.buttons button {
+  background: transparent;
+  border: 2px solid white;
+  padding: 10px 15px;
+  margin-left: 10px;
+  color: white;
+  font-weight: bold;
+  border-radius: 20px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.buttons .get-started {
+  background: linear-gradient(90deg, #a855f7, #ff00ff);
+  border: none;
+}
+
+.buttons .contact,
+.buttons .get-started {
+  background: linear-gradient(90deg, #2596be, #021d25);
+  border: none;
+  padding: 10px 15px;
+  color: white;
+  font-weight: bold;
+  border-radius: 20px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.buttons .contact:hover,
+.buttons .get-started:hover {
+  transform: scale(1.05);
+}
+
+.buttons button:hover {
+  transform: scale(1.05);
+}
+
+/* Hero Section */
+.hero {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 150px 60px;
+}
+
+.hero-content {
+  max-width: 600px;
+}
+
+.hero h1 {
+  font-size: 50px;
+  font-weight: 700;
+  animation: fadeIn 1s ease-in-out;
+}
+
+.hero p {
+  font-size: 22px;
+  margin: 15px 0;
+  animation: fadeIn 1.5s ease-in-out;
+}
+
+/* Updated Button Style */
+.cta-button {
+  background: linear-gradient(90deg,#2596be, #120222d7);
+  border: none;
+  padding: 15px 30px;
+  color: white;
+  font-size: 18px;
+  font-weight: bold;
+  border-radius: 30px;
+  cursor: pointer;
+  transition: transform 0.3s, box-shadow 0.3s;
+  box-shadow: 0px 4px 15px rgba(85, 228, 247, 0.6);
+  animation: pulseGlow 1.5s infinite alternate;
+}
+
+.cta-button:hover {
+  transform: scale(1.15) rotate(2deg);
+  box-shadow: 0px 6px 20px rgba(0, 255, 204, 0.8);
+}
+
+@keyframes pulseGlow {
+  0% {
+    box-shadow: 0px 4px 10px rgba(85, 228, 247, 0.6);
+  }
+
+  100% {
+    box-shadow: 0px 6px 20px rgba(0, 213, 255, 0.8);
+  }
+}
+
+.hero-image {
+  perspective: 1000px;
+  /* Adds depth effect */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 80vh;
+  /* Adjust based on your layout */
+}
+
+.page2 {
+  width: 100%;
+  /* height: 100vh; */
+
+  background: linear-gradient(283.01deg, #180d36 4.37%, #05030b 104.87%),
+    radial-gradient(
+      135.4% 92.05% at 66.7% 110.22%,
+      #5e004d 0%,
+      rgba(94, 0, 77, 0) 59.54%
+    );
+}
+
+.page1 {
+  width: 100%;
+  height: 50vh;
+  display: flex;
+  background: #f8faf3;
+  justify-content: center;
+  margin-top: -20vh;
+}
+
+.page1 div {
+  z-index: 1;
+  width: 500px;
+  border-radius: 40px;
+  /* margin-top: -100px; */
+  /* margin-left: 80px; */
+  padding: 20px;
+  margin-left: 20px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .navbar {
+    flex-direction: column;
+    text-align: center;
+    padding: 10px;
+  }
+
+  .nav-links {
+    flex-direction: column;
+  }
+
+  .buttons {
+    margin-top: 10px;
+  }
+
+  .hero {
+    flex-direction: column;
+    text-align: center;
+  }
+}
