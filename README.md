@@ -1,0 +1,1 @@
+NEURA is a responsive AI-based website designed to provide information about Alzheimer's disease. The website includes sections on key concepts related to Alzheimer's, such as Amyloid and Tau proteins, along with additional resources, company information, and interactive features.
